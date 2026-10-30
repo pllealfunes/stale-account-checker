@@ -1,11 +1,13 @@
-   username,last_login
-   jsmith,2026-10-20
-   mlopez,2026-10-27
-   tempcook,2026-10-15
-   tempadmin,2026-04-01
-   rpatel,2026-05-02
-   akim,2026-09-30
-   newuser,
-   dthomas,2026-02-14
-   cwong,2026-10-01
-   temp_vendor,2026-10-10
+username,last_login
+jsmith,2026-10-20
+mlopez,2026-10-27
+tempcook,2026-10-15
+tempadmin,2026-04-01
+rpatel,2026-05-02
+akim,2026-09-30
+newuser,
+dthomas,2026-02-14
+cwong,2026-10-01
+temp_vendor,2026-10-10
+Temp_intern,2026-10-25
+temp_new,
