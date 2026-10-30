@@ -19,22 +19,28 @@ with open(FILENAME, newline="") as file:
 
 
         if username.lower().startswith("temp"):
-            reasons.append("temporary_access")
+            reasons.append("temporary account")
 
         if last_login == "":
             reasons.append("never logged in")
         else:
              login_date = datetime.strptime(last_login, "%Y-%m-%d")
              if login_date < cutoff_date:
-                reasons.append("stale (over 90 days)")
+                reasons.append(f"no login in over {STALE_DAYS} days")
                     
         if reasons: 
            flagged.append({"username": username, "reason": "; ".join(reasons)})
         else:
             approved.append(username)
+
+with open("flagged_accounts.csv", "w", newline="") as flagged_report:
+  writer = csv.DictWriter(flagged_report, fieldnames=["username", "reason"])
+  writer.writeheader()
+  writer.writerows(flagged)
+
             
 
-
+print("Report written to flagged_accounts.csv")
 print(f"{len(flagged)} flagged, {len(approved)} approved")
 print("Approved: ", approved)
 for item in flagged: print(item["username"], "-", item["reason"])
