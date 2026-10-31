@@ -109,4 +109,4 @@ temp_new,temporary account; never logged in
 
 ## About me
 
-Entry-level cybersecurity professional with a background in healthcare IT, working toward a career in cloud and identity security.
+Entry-level cybersecurity professional working toward a career in cloud and identity security.
