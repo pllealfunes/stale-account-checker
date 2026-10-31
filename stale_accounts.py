@@ -49,7 +49,7 @@ try:
         writer.writerows(flagged)
             
 
-    print(f"Report written to {REPORT_FILENAME} csv")
+    print(f"Report written to {REPORT_FILENAME}")
     print(f"{len(flagged)} flagged, {len(approved)} approved, {skipped} skipped accounts")
     print("Approved: ", approved)
     for item in flagged: print(item["username"], "-", item["reason"])
